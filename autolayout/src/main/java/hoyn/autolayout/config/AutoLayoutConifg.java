@@ -3,8 +3,8 @@ package hoyn.autolayout.config;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.util.Log;
 
-import hoyn.autolayout.utils.L;
 import hoyn.autolayout.utils.ScreenUtils;
 
 /**
@@ -82,7 +82,7 @@ public class AutoLayoutConifg
         int[] screenSize = ScreenUtils.getScreenSize(context, useDeviceSize);
         mScreenWidth = screenSize[0];
         mScreenHeight = screenSize[1];
-        L.e(" screenWidth =" + mScreenWidth + " ,screenHeight = " + mScreenHeight);
+        Log.e("AutoLayoutConfig"," screenWidth =" + mScreenWidth + " ,screenHeight = " + mScreenHeight);
     }
 
     private void getMetaData(Context context)
@@ -104,7 +104,7 @@ public class AutoLayoutConifg
                     "you must set " + KEY_DESIGN_WIDTH + " and " + KEY_DESIGN_HEIGHT + "  in your manifest file.", e);
         }
 
-        L.e(" designWidth =" + mDesignWidth + " , designHeight = " + mDesignHeight);
+        Log.e("AutoLayoutConfig"," designWidth =" + mDesignWidth + " , designHeight = " + mDesignHeight);
     }
 
 

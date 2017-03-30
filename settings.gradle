@@ -1,1 +1,1 @@
-include ':autolayout'
+include ':autolayout',':myapplication'
