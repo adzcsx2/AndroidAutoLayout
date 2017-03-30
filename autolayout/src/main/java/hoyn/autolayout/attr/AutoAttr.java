@@ -1,9 +1,9 @@
 package hoyn.autolayout.attr;
 
+import android.util.Log;
 import android.view.View;
 
 import hoyn.autolayout.utils.AutoUtils;
-import hoyn.autolayout.utils.L;
 
 
 /**
@@ -11,6 +11,7 @@ import hoyn.autolayout.utils.L;
  */
 public abstract class AutoAttr
 {
+    public static String TAG = "AutoAttr";
     public static final int BASE_WIDTH = 1;
     public static final int BASE_HEIGHT = 2;
     public static final int BASE_DEFAULT = 3;
@@ -50,7 +51,7 @@ public abstract class AutoAttr
 
         if (log)
         {
-            L.e(" pxVal = " + pxVal + " ," + this.getClass().getSimpleName());
+            Log.e(TAG," pxVal = " + pxVal + " ," + this.getClass().getSimpleName());
         }
         int val;
         if (useDefault())
@@ -58,21 +59,21 @@ public abstract class AutoAttr
             val = defaultBaseWidth() ? getPercentWidthSize() : getPercentHeightSize();
             if (log)
             {
-                L.e(" useDefault val= " + val);
+                Log.e(TAG," useDefault val= " + val);
             }
         } else if (baseWidth())
         {
             val = getPercentWidthSize();
             if (log)
             {
-                L.e(" baseWidth val= " + val);
+                Log.e(TAG," baseWidth val= " + val);
             }
         } else
         {
             val = getPercentHeightSize();
             if (log)
             {
-                L.e(" baseHeight val= " + val);
+                Log.e(TAG," baseHeight val= " + val);
             }
         }
 
