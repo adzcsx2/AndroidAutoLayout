@@ -59,7 +59,7 @@ dependencies {
 
 ```
 dependencies {
-    compile 'com.zhy:autolayout:1.4.5'
+    compile 'hoyn:autolayout:1.4.5'
 }
 ```
 
@@ -154,14 +154,14 @@ public class UseDeviceSizeApplication extends Application
 对于其他继承系统的FrameLayout、LinearLayout、RelativeLayout的控件，比如`CardView`，如果希望再其内部直接支持"px"百分比化，可以自己扩展，扩展方式为下面的代码，也可参考[issue#21](https://github.com/hongyangAndroid/AndroidAutoLayout/issues/21)：
 
 ```
-package com.zhy.sample.view;
+package hoyn.sample.view;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 
-import com.zhy.autolayout.AutoFrameLayout;
-import com.zhy.autolayout.utils.AutoLayoutHelper;
+import hoyn.autolayout.AutoFrameLayout;
+import hoyn.autolayout.utils.AutoLayoutHelper;
 
 /**
  * Created by zhy on 15/12/8.
@@ -290,7 +290,7 @@ public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
 
 ###(1)导入后出现`org/gradle/api/publication/maven/internal/DefaultMavenFactory`
 
-最简单的方式，通过`compile 'com.zhy:autolayout:x.x.x'`进行依赖使用，如果一定要以module引用，参考该issue[#74](https://github.com/hongyangAndroid/AndroidAutoLayout/issues/74)
+最简单的方式，通过`compile 'hoyn:autolayout:x.x.x'`进行依赖使用，如果一定要以module引用，参考该issue[#74](https://github.com/hongyangAndroid/AndroidAutoLayout/issues/74)
 
 ###(2)RadioGroup,Toolbar等控件中的子View无法完成适配
 
