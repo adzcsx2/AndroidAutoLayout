@@ -223,7 +223,6 @@ public class AutoLayoutHelper
             }
         }
         array.recycle();
-        Log.e("AutoLayoutHelper"," getAutoLayoutInfo " + info.toString());
         return info;
     }
 

@@ -82,7 +82,6 @@ public class AutoLayoutConifg
         int[] screenSize = ScreenUtils.getScreenSize(context, useDeviceSize);
         mScreenWidth = screenSize[0];
         mScreenHeight = screenSize[1];
-        Log.e("AutoLayoutConfig"," screenWidth =" + mScreenWidth + " ,screenHeight = " + mScreenHeight);
     }
 
     private void getMetaData(Context context)
@@ -103,8 +102,6 @@ public class AutoLayoutConifg
             throw new RuntimeException(
                     "you must set " + KEY_DESIGN_WIDTH + " and " + KEY_DESIGN_HEIGHT + "  in your manifest file.", e);
         }
-
-        Log.e("AutoLayoutConfig"," designWidth =" + mDesignWidth + " , designHeight = " + mDesignHeight);
     }
 
 

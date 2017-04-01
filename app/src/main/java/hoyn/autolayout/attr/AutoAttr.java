@@ -1,6 +1,5 @@
 package hoyn.autolayout.attr;
 
-import android.util.Log;
 import android.view.View;
 
 import hoyn.autolayout.utils.AutoUtils;
@@ -9,8 +8,7 @@ import hoyn.autolayout.utils.AutoUtils;
 /**
  * Created by zhy on 15/12/4.
  */
-public abstract class AutoAttr
-{
+public abstract class AutoAttr {
     public static String TAG = "AutoAttr";
     public static final int BASE_WIDTH = 1;
     public static final int BASE_HEIGHT = 2;
@@ -37,43 +35,34 @@ public abstract class AutoAttr
     }
  */
 
-    public AutoAttr(int pxVal, int baseWidth, int baseHeight)
-    {
+    public AutoAttr(int pxVal, int baseWidth, int baseHeight) {
         this.pxVal = pxVal;
         this.baseWidth = baseWidth;
         this.baseHeight = baseHeight;
     }
 
-    public void apply(View view)
-    {
+    public void apply(View view) {
 
         boolean log = view.getTag() != null && view.getTag().toString().equals("auto");
 
-        if (log)
-        {
-            Log.e(TAG," pxVal = " + pxVal + " ," + this.getClass().getSimpleName());
+        if (log) {
+//            Log.e(TAG," pxVal = " + pxVal + " ," + this.getClass().getSimpleName());
         }
         int val;
-        if (useDefault())
-        {
+        if (useDefault()) {
             val = defaultBaseWidth() ? getPercentWidthSize() : getPercentHeightSize();
-            if (log)
-            {
-                Log.e(TAG," useDefault val= " + val);
+            if (log) {
+//                Log.e(TAG," useDefault val= " + val);
             }
-        } else if (baseWidth())
-        {
+        } else if (baseWidth()) {
             val = getPercentWidthSize();
-            if (log)
-            {
-                Log.e(TAG," baseWidth val= " + val);
+            if (log) {
+//                Log.e(TAG," baseWidth val= " + val);
             }
-        } else
-        {
+        } else {
             val = getPercentHeightSize();
-            if (log)
-            {
-                Log.e(TAG," baseHeight val= " + val);
+            if (log) {
+//                Log.e(TAG," baseHeight val= " + val);
             }
         }
 
@@ -82,29 +71,24 @@ public abstract class AutoAttr
         execute(view, val);
     }
 
-    protected int getPercentWidthSize()
-    {
+    protected int getPercentWidthSize() {
         return AutoUtils.getPercentWidthSizeBigger(pxVal);
     }
 
-    protected int getPercentHeightSize()
-    {
+    protected int getPercentHeightSize() {
         return AutoUtils.getPercentHeightSizeBigger(pxVal);
     }
 
 
-    protected boolean baseWidth()
-    {
+    protected boolean baseWidth() {
         return contains(baseWidth, attrVal());
     }
 
-    protected boolean useDefault()
-    {
+    protected boolean useDefault() {
         return !contains(baseHeight, attrVal()) && !contains(baseWidth, attrVal());
     }
 
-    protected boolean contains(int baseVal, int flag)
-    {
+    protected boolean contains(int baseVal, int flag) {
         return (baseVal & flag) != 0;
     }
 
@@ -116,8 +100,7 @@ public abstract class AutoAttr
 
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "AutoAttr{" +
                 "pxVal=" + pxVal +
                 ", baseWidth=" + baseWidth() +
