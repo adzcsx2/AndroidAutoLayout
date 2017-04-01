@@ -8,5 +8,5 @@
 	}
 #Step 2. Add the dependency
 	dependencies {
-	        compile 'com.github.adzcsx2:AndroidAutoLayout:c7efc7da63'
+	        compile 'com.github.adzcsx2:AndroidAutoLayout:27c326f8cf'
 	}
