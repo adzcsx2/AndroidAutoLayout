@@ -1,4 +1,4 @@
-package hoyn.autolayout.test.ui;
+package hoyn.autolayout.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

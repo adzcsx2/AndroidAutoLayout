@@ -3,7 +3,6 @@ package hoyn.autolayout.config;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.util.Log;
 
 import hoyn.autolayout.utils.ScreenUtils;
 

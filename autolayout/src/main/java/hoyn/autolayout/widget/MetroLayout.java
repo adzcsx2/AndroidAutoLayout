@@ -184,7 +184,7 @@ public class MetroLayout extends ViewGroup
 
 
     @Override
-    public MetroLayout.LayoutParams generateLayoutParams(AttributeSet attrs)
+    public LayoutParams generateLayoutParams(AttributeSet attrs)
     {
         return new LayoutParams(getContext(), attrs);
     }

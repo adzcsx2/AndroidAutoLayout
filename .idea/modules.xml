@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AutoLayout.iml" filepath="$PROJECT_DIR$/AutoLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidAutoLayout.iml" filepath="$PROJECT_DIR$/AndroidAutoLayout.iml" />
+      <module fileurl="file://D:\workplace\AndroidAutoLayout\AutoLayout.iml" filepath="D:\workplace\AndroidAutoLayout\AutoLayout.iml" />
+      <module fileurl="file://D:\workplace\AndroidAutoLayout\app\app.iml" filepath="D:\workplace\AndroidAutoLayout\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" />
     </modules>
   </component>
 </project>
