@@ -8,5 +8,5 @@
 	}
 #Step 2. Add the dependency
 	dependencies {
-	        compile 'com.github.adzcsx2:AndroidAutoLayout:master-SNAPSHOT'
+	        compile 'com.github.adzcsx2:AndroidAutoLayout:2b6502e246'
 	}
